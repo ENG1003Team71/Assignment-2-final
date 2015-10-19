@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>TRACK ME - RECORD</title>
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        
+		
+		<style>
+			h1 {
+				padding: 1em;
+				font-family: calibri;
+				font-size: 2em;
+                left: 30%;
+				color: rgb(255, 255, 255);
+                position: relative; 
+                top: 0px; 
+            }
+            
+            #back {
+                position: fixed;
+                top: 90%;
+                left: 10%;
+            }
+            
+            #backtext {
+                position: fixed;
+                top: 86.5%;
+                left: 12%;
+            }
+            
+            #play1 {
+                position: fixed;
+                left: 5%;
+                top: 14.5%;
+                
+            }
+         
+            #Run1 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 40px;
+                top: 15%;
+                left: 40%;
+            }
+            
+            #Dist1 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 16px;
+                top: 17%;
+                left: 83.5%;
+            }
+            
+            #Time1 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 16px;
+                top: 14%;
+                left: 83.5%;
+            }
+            
+            #play2 {
+                position: fixed;
+                left: 5%;
+                top: 24.5%;
+                
+            }
+       
+            #Run2 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 40px;
+                top: 25%;
+                left: 40%;
+            }
+            
+            #Dist2 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 16px;
+                top: 27%;
+                left: 83.5%;
+            }
+            
+            #Time2 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 16px;
+                top: 24%;
+                left: 83.5%;
+            }
+            
+            #play3 {
+                position: fixed;
+                left: 5%;
+                top: 34.5%;
+                
+            }
+        
+            #Run3 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 40px;
+                top: 35%;
+                left: 40%;
+            }
+            
+            #Dist3 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 16px;
+                top: 37%;
+                left: 83.5%;
+            }
+            
+            #Time3 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 16px;
+                top: 34%;
+                left: 83.5%;
+            }
+            
+            #play4 {
+                position: fixed;
+                left: 5%;
+                top: 44.5%;
+                
+            }
+        
+            #Run4 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 40px;
+                top: 45%;
+                left: 40%;
+            }
+            
+            #Dist4 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 16px;
+                top: 47%;
+                left: 83.5%;
+            }
+            
+            #Time4 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 16px;
+                top: 44%;
+                left: 83.5%;
+            }
+            
+            #play5 {
+                position: fixed;
+                left: 5%;
+                top: 54.5%;
+                
+            }
+            
+            #Run5 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 40px;
+                top: 55%;
+                left: 40%;
+            }
+            
+            #Dist5 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 16px;
+                top: 57%;
+                left: 83.5%;
+            }
+            
+            #Time5 {
+                position: fixed;
+                font-family: calibri;
+				font-size: 16px;
+                top: 54%;
+                left: 83.5%;
+            }
+            
+            #delete1 {
+                position: fixed;
+                top: 15%;
+                right: 4%;
+            }
+            
+            #delete2 {
+                position: fixed;
+                top: 25%;
+                right: 4%;
+            }
+            
+            #delete3 {
+                position: fixed;
+                top: 35%;
+                right: 4%;
+            }
+            
+            #delete4 {
+                position: fixed;
+                top: 45%;
+                right: 4%;
+            }
+            
+            #delete5 {
+                position: fixed;
+                top: 55%;
+                right: 4%;
+            }
+            
+        </style>
+		
+	</head>
+	
+	<body>
+		<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">  
+       <span>      
+                <!-- Left aligned menu below button -->
+<button id="demo-menu-lower-left"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">more_vert</i>
+</button>
+
+
+       </span>  
+
+      <!-- Title -->
+      <span class="mdl-layout-title"><h1>VIEW RUNS</h1></span>
+
+
+ 
+        
+      </nav>
+                
+    </div>
+    
+      
+  </header>
+
+  <main class="mdl-layout__content">
+      <div>
+      <a href="viewrun.html"><i id = "play1" class="material-icons">play_circle_outline</i></a>
+      <h8 id = "Run1" class="text">13/02/2015</h8>
+      <h9 id = "Dist1" class="text">DISTANCE: 3.42km</h9>
+      <h10 id = "Time1" class="text">TIME: 13:52mins</h10>
+      <i id = "delete1" class="material-icons">delete</i>
+      </div>
+      
+      <div>
+      <a href="viewrun.html"><i id = "play2" class="material-icons">play_circle_outline</i></a>
+      <h8 id = "Run2" class="text">16/02/2015</h8>
+      <h9 id = "Dist2" class="text">DISTANCE: 3.84km</h9>
+      <h10 id = "Time2" class="text">TIME: 14:22mins</h10>
+      <i id = "delete2" class="material-icons">delete</i>
+      </div>
+      
+      <div>
+      <a href="viewrun.html"><i id = "play3" class="material-icons">play_circle_outline</i></a>
+      <h8 id = "Run3" class="text">19/02/2015</h8>
+      <h9 id = "Dist3" class="text">DISTANCE: 3.95km</h9>
+      <h10 id = "Time3" class="text">TIME: 14:12mins</h10>
+      <i id = "delete3" class="material-icons">delete</i>
+      </div>
+      
+      <div>
+      <a href="viewrun.html"><i id = "play4" class="material-icons">play_circle_outline</i></a>
+      <h8 id = "Run4" class="text">23/02/2015</h8>
+      <h9 id = "Dist4" class="text">DISTANCE: 4.10km</h9>
+      <h10 id = "Time4" class="text">TIME: 13:44mins</h10>
+      <i id = "delete4" class="material-icons">delete</i>
+      </div>
+      
+      <div>
+      <a href="viewrun.html"><i id = "play5" class="material-icons">play_circle_outline</i></a>
+      <h8 id = "Run5" class="text">25/02/2015</h8>
+      <h9 id = "Dist5" class="text">DISTANCE: 4.02km</h9>
+      <h10 id = "Time5" class="text">TIME: 13:20mins</h10>
+      <i id = "delete5" class="material-icons">delete</i>
+      </div>
+    
+      
+      
+      
+
+    
+      
+       
+<div>
+<a href="newindex.html">
+<i id = "back" class="material-icons">reply</i>
+</a>
+    
+    <h6 id = "backtext" class="text">Home</h6>
+
+          </div>
+      
+
+  </main>
+</div>
+	
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+    <script>
+
+    </script>
+    
+    
+	</body>
+</html>
