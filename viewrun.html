@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>TRACK ME - VIEW YOUR RUN</title>
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        
+		
+		<style>
+            
+			h1 {
+				padding: 1em;
+				font-family: calibri;
+				font-size: 2em;
+                left: 30%;
+				color: rgb(255, 255, 255);
+                position: relative; 
+                top: 0px; 
+            }
+            
+            #map {
+                position: fixed;
+                top: 50px;
+                left: 2%;
+                height: 400px;
+                width: 500px;    
+            }
+      
+            #YOURRUN {
+                position: fixed;
+                font-family: calibri;
+                top: 13%;
+                left: 45%;
+                font-size: 35px;
+            }
+            
+            #distance {
+                position: fixed;
+                font-family: calibri;
+                top: 20%;
+                left: 45%;
+                height: 30px;
+                font-size: 20px;
+            }
+            
+            #speed {
+                position: fixed;
+                font-family: calibri;
+                top: 25%;
+                left: 45%;
+                height: 30px;
+                font-size: 20px;
+            }
+            
+            #time {
+                position: fixed;
+                font-family: calibri;
+                top: 30%;
+                left: 45%;
+                height: 30px;
+                font-size: 20px;
+            }
+            
+            #back {
+                position: fixed;
+                top: 90%;
+                left: 10%;
+            }
+            
+            #backtext {
+                position: fixed;
+                top: 87%;
+                left: 12%;
+            }
+        </style>
+		
+	</head>
+	
+	<body>
+		<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">  
+       <span>      
+                <!-- Left aligned menu below button -->
+<button id="demo-menu-lower-left"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">more_vert</i>
+</button>
+
+
+       </span>  
+
+      <!-- Title -->
+      <span class="mdl-layout-title"><h1>VIEW YOUR RUN</h1></span>
+
+
+ 
+        
+      </nav>
+                
+    </div>
+    
+      
+  </header>
+
+  <main class="mdl-layout__content">
+      <div>
+          <h2 id = "YOURRUN" class="text">YOUR RUN:</h2>
+      </div>
+      <div>
+            <h3 id = "distance" class="text">Distance: 4.02 km</h3>
+      </div>
+      <div>
+        <h4 id = "speed" class="text">Avg. speed: 17.6 km/h</h4>
+      </div>
+      <div> <h5 id = "time" class="text">Time: 13.70 mins</h5></div>
+      
+      
+      
+
+      
+
+      <script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: {lat: -37.9120467, lng: 145.1343136},
+          zoom: 17,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>   
+      
+      <div id="map"></div>
+       
+<div>
+<a href="view.html">
+<i id = "back" class="material-icons">reply</i>
+</a>
+    
+    <h5 id = "backtext" class="text">Back</h5>
+          </div>
+      
+
+  </main>
+</div>
+	
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+    <script>
+
+    </script>
+    
+    
+	</body>
+</html>
