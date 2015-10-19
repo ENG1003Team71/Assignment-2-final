@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>TRACK ME - RECORD</title>
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        
+		
+		<style>
+            
+			h1 {
+				padding: 1em;
+				font-family: calibri;
+				font-size: 2em;
+                left: 30%;
+				color: rgb(255, 255, 255);
+                position: relative; 
+                top: 0px; 
+            }
+            
+            #map {
+                position: fixed;
+                top: 50px;
+                left: 2%;
+                height: 400px;
+                width: 500px;    
+            }
+      
+            #Time {
+                position: fixed;
+                font-family: calibri;
+                top: 20%;
+                left: 60%;
+                text-align: center;
+                font-size: 35px;
+                margin-left:
+            }
+            
+            #Distance {
+                position: fixed;
+                font-family: calibri;
+                top: 196px;
+                left: 56%;
+                height: 30px;
+                font-size: 20px;
+                margin-left: -30px
+            }
+            
+            #Speed {
+                position: fixed;
+                font-family: calibri;
+                top: 203px;
+                right: 21%;
+                height: 30px;
+                font-size: 20px;
+                margin-left: -30px
+            }
+            
+            #START {
+                position: fixed;
+                top: 320px;
+                left: 66%;
+                height: 80px;
+                width: 600px;
+                font-size: 40px;
+                margin-left: -300px
+            }
+            
+            #STOP {
+                position: fixed;
+                top: 420px;
+                left: 66%;
+                height: 80px;
+                width: 600px;
+                font-size: 40px;
+                margin-left: -300px
+            }
+            
+            #nameyourrun {
+                position: fixed;
+                top: 500px;
+                left: 44%;
+                height: 50px;
+                width: 175px;   
+            }
+            
+            #SAVE {
+                position: fixed;
+                top: 517px;
+                left: 57%;
+                height: 30px;
+                width: 80px;
+                font-size: 25px;
+            }
+            
+            #VIEW {
+                position: fixed;
+                top: 517px;
+                left: 64%;
+                height: 30px;
+                width: 80px;
+                font-size: 25px;
+            }
+            
+            #RESET {
+                position: fixed;
+                top: 522px;
+                left: 75%;
+                height: 50px;
+                width: auto;
+                
+            }
+            
+            #back {
+                position: fixed;
+                top: 90%;
+                left: 10%;
+            }
+            
+            #backtext {
+                position: fixed;
+                top: 87%;
+                left: 12%;
+            }
+        </style>
+		
+	</head>
+	
+	<body>
+		<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">  
+       <span>      
+                <!-- Left aligned menu below button -->
+<button id="demo-menu-lower-left"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">more_vert</i>
+</button>
+
+
+       </span>  
+
+      <!-- Title -->
+      <span class="mdl-layout-title"><h1>RECORD</h1></span>
+
+
+ 
+        
+      </nav>
+                
+    </div>
+    
+      
+  </header>
+
+  <main class="mdl-layout__content">
+      <div>
+          <h2 id = "Distance" class="text">Distance: 3.42km</h2>
+      </div>
+      <div>
+        <h3 id = "Time" class="text">Time: 13:31</h3>
+        <h4 id = "Speed" class="text">Speed: 17.6 km/h</h4>
+      </div>
+      
+      
+      
+
+      <div>      
+      <button id = "START" class="mdl-button mdl-js-button mdl-button--raised" >START</button>
+      </div>
+      <div>
+          <button id = "STOP" class="mdl-button mdl-js-button mdl-button--raised" >STOP</button>
+      </div>
+      <form action="#">
+      <div class="mdl-textfield mdl-js-textfield" id="nameyourrun">
+            <input class="mdl-textfield__input" type="text" id="sample1" style = "font-size: 20px; width: 150px" />
+            <label class="mdl-textfield__label" for="sample1" style = "font-size: 20px; width: 175px" >Name Your Run</label>
+      </div>
+      </form>
+      <div>      
+      <button id = "SAVE" class="mdl-button mdl-js-button mdl-button--raised" >SAVE RUN</button>
+      </div>
+      <div>
+      <button id = "VIEW" class="mdl-button mdl-js-button mdl-button--raised" onclick="window.location.href='view.html' ">VIEW</button>
+      <div/>
+      <div>
+      <i id = "RESET" class="material-icons">autorenew</i></div>
+
+      <script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: {lat: -37.9120467, lng: 145.1343136},
+          zoom: 17,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>   
+      
+      <div id="map"></div>
+       
+<div>
+<a href="newindex.html">
+<i id = "back" class="material-icons">reply</i>
+</a>
+    
+    <h5 id = "backtext" class="text">Home</h5>
+          </div>
+      
+
+  </main>
+</div>
+	
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+    <script>
+
+    </script>
+    
+    
+	</body>
+</html>
